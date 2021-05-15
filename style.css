@@ -1,0 +1,349 @@
+/*  Estilos Comuns */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+/* BG */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse-circle,
+.mouse-dot {
+    border-radius:50%;
+    position: fixed;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mouse-circle {
+    width: 6rem;
+    height: 6rem;
+    border: 0.2rem solid #09d4e2;
+    animation: mouseCircleAnim 10s infinite linear;
+}
+
+@keyframes mouseCircleAnim {
+    0% {
+        width: 6rem; 
+        height: 6rem;
+    }
+    25% {
+        width: 8rem; 
+        height: 8rem;
+    }
+    35% {
+        width: 4rem; 
+        height: 4rem;
+    }
+    70% {
+        width: 8rem; 
+        height: 8rem;
+    }
+    100% {
+        width: 4rem; 
+        height: 4rem;
+    }
+}
+
+@keyframes mouseDotAnim {
+    0% {
+        width: 0.5rem; 
+        height: 0.5rem;
+    }
+    55% {
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+    100% {
+        width: 0.5rem; 
+        height: 0.5rem;
+    }
+}
+
+.mouse-dot{
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #e2740c;
+    animation: mouseDotAnim 10s infinite linear;
+}
+
+.main-btn {
+    position: absolute;
+    bottom:3rem;
+    width: 13rem;
+    height: 13rem;
+    background-color: #74bfe2;
+    border-radius: 50%;
+    border: 0.2rem double #527f8df3;
+    padding: 0.1rem;
+    overflow: hidden;
+}
+
+.main-btn-content {
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid #527f8df3;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    transition: transform 0.2s, border 0.2s;
+}
+
+.main-btn:hover .main-btn-content {
+    transform: rotate(60deg);
+    border: 0.2rem double #527f8df3;
+    transition: transform 0.2s 0.5s, border 0.2s;
+}
+
+.main-btn-line{
+    position: absolute;
+    top: 4rem;
+    width: 3rem;
+    height: 0.5rem;
+    border: 0.1rem solid #fff
+
+}
+
+.main-btn-line:nth-child(1) {
+    transform: rotateZ(-45deg)translateX(-0.65rem);
+    transform-origin: left center;
+    border-right: none;
+}
+
+
+.main-btn-line:nth-child(2) {
+    transform: rotateZ(45deg)translateX(0.65rem);
+    transform-origin: right center;
+    border-left: none;
+}
+
+.main-btn-line:nth-child(3) {
+    transform: rotateZ(90deg)translateX(0.5rem);
+    border-left: none;
+
+}
+
+.main-btn span {
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+    bottom: 3rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.page-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.section-1 {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.main-circle {
+    width: 55rem;
+    height: 55rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: width .2s, height .2s;
+}
+
+.main-circle:hover {
+    width: 75rem;
+    height: 75rem;
+}
+
+.main-circle img {
+    mix-blend-mode: overlay;
+    position: relative;
+    transition: left 2s, top 2s;
+
+}
+
+.circle {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color:seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.circle-1 {
+    background: url(images/landing/circle-1-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin-left: -10rem;
+}
+.circle-2 {
+    background: url(images/landing/circle-2-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin-right: -10rem;
+}
+.circle-3 {
+    background: url(images/landing/circle-3-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin-left: -10rem;
+}
+.circle-4 {
+    background: url(images/landing/circle-4-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-right: -10rem;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.featured-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 2.5;
+    position: sticky;
+    top: 0;
+}
+
+.featured-text-1{
+    margin: 0 auto 0 10rem;
+}
+
+.featured-text-2{
+    margin: 0 10rem 0 auto;
+}
+
+
+
+.ripple {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color:rgb(117, 204, 228);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.5s forwards;
+
+}
+
+@keyframes rippleAnim {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 210%;
+        height: 210%;
+    }    
+}
+
+.section-2{
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    padding: 7rem 7rem 10rem 7rem;
+}
+
+.section-2-heading {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+}
+
+.about-me-text {
+    width: 80%;
+    margin: auto;
+}
+
+.about-me-text span {
+    font-family: 'Quicksand', sans serif;
+    font-size: 8rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.5rem;
+    line-height: 1.0;
+    /*text-shadow: 0 0 1rem #90a3df;*/
+    position: relative;
+    /*mix-blend-mode: color-dodge;*/
+}
+
+@keyframes aboutMeTextAnim {
+    0% {
+        color: #aaa;
+        top: 0;    
+    }
+    10%,
+    90% {
+        color: #fff;
+        top: 2rem;
+    }
+    100% {
+        color: #aaa;
+        top: 0;  
+    }
+    
+}
+
+.section-2 .main-btn {
+    left: 50%;
+    bottom: -5rem;
+    transform:translateX(-50%);
+}
