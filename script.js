@@ -79,10 +79,10 @@ mainBtns.forEach((btn) => {
 
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome to my professional profile. Right after getting my college degree in EE back 1984 I've been working with computer technology in several and different areas. \
-As a Jr Engineer started working as an Assembly and C programmer on Unix-like platforms such as SCO Unix and others. After couple years, moved to \
-Systems Integration and Network Engineering having collected a couple of IT certifications and developed a bunch of DevOps solutions for complex datacenter-based IT applications running under \
-Microsoft, FreeBSD, OpenBSD and Linux platforms. Jumped to WEB development using LAMP, Boostrap, Bash, Java and Spring Boot technologies. Currently, developing and mantaining \
+const aboutMeTextContent = "Hi! Welcome to my professional profile. After getting my college degree in Electrical Engineering in 1984 started working with computer technology in several and different areas. \
+As a Jr Engineer started working as an Assembly and C programmer on Unix-like platforms such as SCO Unix and others. After couple of years, moved to \
+Systems Integration and Network Engineering having collected a solid foundation on script-based languages and developed a couple of DevOps network-centric based solutions for complex datacenter-based IT applications running under \
+Microsoft, FreeBSD, OpenBSD and Linux platforms. Jumped to WEB development using LAMP, Bootstrap, Java and Spring Boot technologies. Currently, developing and mantaining \
 a bunch of web-based payment applications using Docker, Kubernetes, PHP, JS, Spring Boot, MySQL, Nginx and others as Senior Software Architect. Want to know more about my challenging career as a \
 solutions-oriented Sr Engineer? Just contact me...:)";
 
