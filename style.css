@@ -10,10 +10,32 @@
     outline: none;
 }
 
-html {
+.tit {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-size: 62.5%;
+    }
+
+
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
 }
 /* BG */
+div.body-content{
+    /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+    padding-bottom: 100px;
+}
 
 .center {
     display: flex;
@@ -32,28 +54,28 @@ html {
 }
 
 .mouse-circle {
-    width: 6rem;
-    height: 6rem;
-    border: 0.2rem solid #09d4e2;
+    width: 3rem;
+    height: 3rem;
+    border: 0.25rem solid #63898b;
     animation: mouseCircleAnim 10s infinite linear;
 }
 
 @keyframes mouseCircleAnim {
     0% {
-        width: 6rem; 
-        height: 6rem;
+        width: 4rem; 
+        height: 4rem;
     }
     25% {
-        width: 8rem; 
-        height: 8rem;
+        width: 6rem; 
+        height: 6rem;
     }
     35% {
         width: 4rem; 
         height: 4rem;
     }
     70% {
-        width: 8rem; 
-        height: 8rem;
+        width: 6rem; 
+        height: 6rem;
     }
     100% {
         width: 4rem; 
@@ -79,7 +101,7 @@ html {
 .mouse-dot{
     width: 0.5rem;
     height: 0.5rem;
-    background-color: #e2740c;
+    background-color: #0c45e2c4;
     animation: mouseDotAnim 10s infinite linear;
 }
 
@@ -151,10 +173,131 @@ html {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(images/bg.jpg) center no-repeat;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(images/bg.jpg) center no-repeat;
     background-size: cover;
 }
 
+/*Navigation*/
+.progress-bar {
+    position: fixed;
+    bottom: 7rem;
+    right: 7rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(166, 166, 166);
+    border-radius: 50%;
+    z-index: 200;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.half-circle, .half-circle-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+    pointer-events: none;
+}
+
+
+.half-circle:nth-child(1) {
+    background-color: #0c45e2c4;
+}
+
+.half-circle:nth-child(2) {
+    background-color: #0c45e2c4;
+}
+
+.half-circle-top {
+    background-color: rgb(166, 166, 166);
+}
+
+/*.progress-bar:hover .half-circle-top {
+    opacity: 0;
+    transition: opacitttttttttttttttttttttttty 0s 1s;
+}
+
+.progress-bar:hover .half-circle:nth-child(1) {
+    transform: rotate(180deg);
+    transition: transform 1s linear;
+}
+
+
+.progress-bar:hover .half-circle:nth-child(2) {
+    transform: rotate(360deg);
+    transition: transform 2s linear;
+}
+*/
+.progress-bar-circle {
+    width: 6.85rem;
+    height: 6.85rem;
+    background-color: rgb(166, 166, 166);
+    border-radius: 50%;
+    color: #63898b;
+    font-size: 4rem;
+    z-index: 200;
+    transition: transform .5s;
+    pointer-events: none;
+}
+/* Menu Icon */
+.menu-icon {
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+    width: 12rem;
+    height: 7rem;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s;
+}
+
+.menu-icon-line {
+    width: 4rem;
+    height: 0.1rem;
+    background-color: #fff;
+    margin: 0.5rem 0;
+    box-shadow: 0 0.3rem 0.5rem #000;
+}
+/* End of Menu Icon */
+.show-menu-icon {
+    opacity: 1;
+    visibility: visible;
+}
+/*Navbar*/
+.navbar {
+    position: fixed;
+    top: 2,5rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 3rem;
+    z-index: 100;
+    transition: opacity .5s;
+    visibility: 0.5s, transform 0.5s;
+}
+
+.navbar-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 2.5rem;
+    text-shadow: 0 0.3rem 0.5rem #000;
+
+}
+.hide-navbar {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10rem);
+}
+/* End of Navigation */
 .section-1 {
     position:relative;
     width: 100%;
@@ -164,38 +307,38 @@ html {
 .logo {
     font-family: 'Quicksand', sans-serif;
     position: absolute;
-    top: 2rem;
+    top: 0;
     left: 5rem;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     font-weight: bolder;
     color: #ffffff;
 }
 
 .main-circle {
-    width: 55rem;
-    height: 55rem;
+    width: 25rem;
+    height: 25rem;
     position: absolute;
     overflow: hidden;
     border-radius: 50%;
-    transition: width .2s, height .2s;
+    transition: width .5s, height .5s;
 }
 
 .main-circle:hover {
-    width: 75rem;
-    height: 75rem;
+    width: 55rem;
+    height: 55rem;
 }
 
 .main-circle img {
     mix-blend-mode: overlay;
     position: relative;
     transition: left 2s, top 2s;
-
 }
 
 .circle {
-    width: 22rem;
-    height: 22rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
     background-color:seashell;
     align-self: center;
@@ -211,7 +354,15 @@ html {
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
+
 }
+
+.circle-1:hover {
+    width: 45rem;
+    height: 45rem;
+    transition: width .5s, height .5s;
+}
+
 .circle-2 {
     background: url(images/landing/circle-2-img.jpg) center no-repeat;
     background-size: cover;
@@ -219,6 +370,14 @@ html {
     border: 0.5rem double #527f8df3;
     margin-right: -10rem;
 }
+
+.circle-2:hover {
+    width: 45rem;
+    height: 45rem;
+    transition: width .5s, height .5s;
+
+}
+
 .circle-3 {
     background: url(images/landing/circle-3-img.jpg) center no-repeat;
     background-size: cover;
@@ -226,12 +385,26 @@ html {
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
 }
+
+.circle-3:hover {
+    width: 45rem;
+    height: 45rem;
+
+}
+
 .circle-4 {
     background: url(images/landing/circle-4-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
     margin-right: -10rem;
+}
+
+.circle-4:hover {
+    width: 45rem;
+    height: 45rem;
+    transition: width .5s, height .5s;
+
 }
 
 .circles {
@@ -265,8 +438,6 @@ html {
     margin: 0 10rem 0 auto;
 }
 
-
-
 .ripple {
     position: absolute;
     width: 0;
@@ -298,8 +469,8 @@ html {
 
 .section-2-heading {
     font-size: 3rem;
-    font-weight: 600;
     color: #fff;
+    margin: 2rem;
     position: absolute;
     top: 50%;
     left: 10rem;
@@ -307,6 +478,8 @@ html {
     width: 0;
     word-break: break-all;
     line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
 }
 
 .about-me-text {
@@ -346,4 +519,195 @@ html {
     left: 50%;
     bottom: -5rem;
     transform:translateX(-50%);
+}
+
+.section-3 {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    padding: 7rem 7rem 10rem 7rem;
+}
+
+.section-3-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    position: absolute;
+    top: 75%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.project {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color:seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.projects {
+    position: absolute;
+    top: 25%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: repeat(2,2fr);
+}
+
+.project circle-1:hover {
+    width: 55rem;
+    height: 55rem;
+}
+.section-4 {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    padding: 7rem 7rem 10rem 7rem;
+}
+
+
+.section-4-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.service {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color:seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.services {
+    position: absolute;
+    top: 50%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+
+.section-5 {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    padding: 7rem 7rem 10rem 7rem;
+}
+
+.section-5-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    position: absolute;
+    top: 125%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.contact {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color:seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+
+.contacts {
+    position: absolute;
+    top: 75%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.footer{
+    position: relative;
+    top: 100%;
+    /*background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35));*/
+    width: 100%;
+    /*height: 200px;*/
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    bottom: 0;
+    left: 0;
+}
+
+
+.main-part {
+    display: flex;
+    align-content: center;
+    padding: 4rem;
+}
+
+.footer-heading {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: royalblue;
+    margin: 1rem 0 3rem 0;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 2rem;
+}
+
+.footer-list-link {
+    font-family: 'Quicksand', sans-serif;
+    color: royalblue;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.2rem;
+    padding: 0px;
 }
