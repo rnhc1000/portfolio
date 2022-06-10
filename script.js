@@ -7,8 +7,8 @@ const mouseCircleFn = (x,y) => {
     mouseDot.style.cssText=`top: ${y}px; left: ${x}px; opacity: 1`;
 };
 
-/*const circles = document.querySelectorAll(".circle");
-const mainImg = document.querySelector(".main-circle img");*/
+const circles = document.querySelectorAll(".circle");
+const mainImg = document.querySelector(".main-circle img");
 
 let mX = 0;
 let mY = 0;
@@ -166,12 +166,12 @@ menuIcon.addEventListener('click', () => {
 
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome! Thanks for touching down at my personal page to learn about my professional skills. Let's get started! After getting my college degree in EE* in 1984, I started working with computer technology in several and different areas over time. \
-As Jr started working with Assembly and C programming on Unix-like platforms such as SCO Unix and others. After couple of years, moved to \
+const aboutMeTextContent = "Hi! Welcome! Thanks for touching down at my personal page to know a bit more about my professional skills. Let's get started! After getting my college degree in EE* in 1984, I started working with computer technology in several and different areas over time. \
+As Jr started programming in Assembly and C languages on Unix-like platforms such as SCO Unix and others. After couple of years, moved to \
 Systems Integration and Network Engineering having collected a solid foundation on script-based languages and developed a couple of DevOps network-centric based solutions for complex datacenter-based IT applications running under \
-Microsoft, FreeBSD, OpenBSD and Linux platforms. Jumped to WEB development using LAMP, Bootstrap, Java and Spring Boot technologies. Currently, developing and mantaining \
-a bunch of web-based payment applications using Docker, Kubernetes, PHP, JS, Spring Boot, MySQL, Nginx and others as Senior Software Architect. Want to know more about my challenging career as a \
-solutions-oriented Sr Engineer? Just keep reading...";
+Microsoft, FreeBSD, OpenBSD and Linux platforms. Jumped to WEB development using LAMP, Bootstrap, OOP, JS, Java, and Spring Boot technologies. Currently, developing and mantaining \
+a bunch of web-based payment applications using Docker, Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others as Senior Software Architect. Want to know more about my challenging career as a \
+solutions-oriented Senior Architect? Drop me a quick message at my social networks...";
 
 //console.log(Array.from(aboutMeTextContent));
 Array.from(aboutMeTextContent).forEach(char => {
