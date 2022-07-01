@@ -470,7 +470,7 @@ div.body-content {
 } */
 
 .circle-5 {
-    background: url(../images/skills/regex.jpg) center no-repeat;
+    background: url(../images/skills/oop.1.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -501,7 +501,7 @@ div.body-content {
 }
 
 .circle-7 {
-    background: url(../images/skills/git.jpg) center no-repeat;
+    background: url(../images/skills/dbExpertsPostgreS.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -516,7 +516,9 @@ div.body-content {
 }
 
 .circle-8 {
-    background: url(../images/skills/k8.1.jpg) center no-repeat;
+    /* background: url(../images/skills/k8.1.jpg) center no-repeat; */
+    background: url(../images/skills/freeBSD8.png) center no-repeat;
+    background-size: cover;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -592,7 +594,7 @@ div.body-content {
 }
 
 .circle-14 {
-    background: url(../images/skills/udemyPHP7.jpg) center no-repeat;
+    background: url(../images/skills/regex.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -622,7 +624,7 @@ div.body-content {
 }
 
 .circle-16 {
-    background: url(../images/skills/dbExpertsPostgreS.png) center no-repeat;
+    background: url(../images/skills/docker.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -653,7 +655,7 @@ div.body-content {
 }
 
 .circle-18 {
-    background: url(../images/skills/docker.jpg) center no-repeat;
+    background: url(../images/skills/k8.1.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -684,7 +686,7 @@ div.body-content {
 
 
 .circle-20 {
-    background: url(../images/skills/freeBSD8.png) center no-repeat;
+    background: url(../images/skills/freeBSDOpenIT.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -745,7 +747,7 @@ div.body-content {
 }
 
 .circle-23 {
-    background: url(../images/projects/portaneir.1.png) center no-repeat;
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
@@ -760,7 +762,8 @@ div.body-content {
 }
 
 .circle-24 {
-    background: url(../images/projects/concilia.png) center no-repeat;
+    /* background: url(../images/projects/concilia.png) center no-repeat; */
+    background: url(../images/projects/extratoUserede.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -777,7 +780,7 @@ div.body-content {
 
 .circle-31 {
     /* background: url(../images/social-icons/GitHub-Logo.png) center no-repeat; */
-    background: url(../images/projects/concilia.png) center no-repeat;
+    background: url(../images/projects/zabbix.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -793,7 +796,7 @@ div.body-content {
 
 .circle-32 {
     /* background: url(../images/social-icons/gmail.png) center no-repeat; */
-    background: url(../images/projects/concilia.png) center no-repeat;
+    background: url(../images/projects/grafana.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -810,7 +813,7 @@ div.body-content {
 
 .circle-33 {
     /* background: url(../images/social-icons/telegram-icone-icon.png) center no-repeat; */
-    background: url(../images/projects/concilia.png) center no-repeat;
+    background: url(../images/projects/mapa.1.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -826,7 +829,7 @@ div.body-content {
 
 .circle-34 {
     /* background: url(../images/social-icons/1whatsapp.png) center no-repeat; */
-    background: url(../images/projects/concilia.png) center no-repeat;
+    background: url(../images/projects/code.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -835,6 +838,96 @@ div.body-content {
 }
 
 .circle-34:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-51 {
+    background: url(../images/skills/ccna.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-left: -10rem;
+}
+
+.circle-51:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-52 {
+    background: url(../images/skills/ccda.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-right: -10rem;
+}
+
+.circle-52:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+.circle-53 {
+    background: url(../images/skills/ccnp.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-left: -10rem;
+}
+
+.circle-53:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-54 {
+    background: url(../images/skills/ccdp.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-right: -10rem;
+}
+
+.circle-54:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-55 {
+    background: url(../images/skills/ipv6Br.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-left: -10rem;
+}
+
+.circle-55:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-56 {
+    background: url(../images/skills/c.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin-top: 5rem;
+    margin-right: -10rem;
+}
+
+.circle-56:hover {
     width: 35rem;
     height: 35rem;
     transition: width 5s, height 5s;
@@ -996,6 +1089,11 @@ div.body-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.0rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 255);
+    text-align: right;
 }
 
 
@@ -1044,6 +1142,11 @@ div.body-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.0rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 255);
+    text-align: right;
 }
 
 .section-5 {
