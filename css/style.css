@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=AzeeBee:wght@300;400;500;600;700&display=swap'); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Exo:ital,wght@0,100;0,400;1,100&display=swap');
 
 * {
     margin: 0;
@@ -18,26 +21,27 @@
 }
 
 .tit {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    text-transform: uppercase;;
+    text-transform: uppercase;
     text-shadow: 0.3rem 0.5rem #000;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-size: 62.5%;
-    }
+}
 
-#wrapper{
+#wrapper {
     min-height: 100%;
     position: relative;
 }
-div.body-content{
-    /** Altura do rodapé tem que ser igual a isso aqui e vice-versa **/
+
+div.body-content {
     padding-bottom: 100px;
 }
 
@@ -49,10 +53,10 @@ div.body-content{
 
 .mouse-circle,
 .mouse-dot {
-    border-radius:50%;
+    border-radius: 50%;
     position: fixed;
     z-index: 300;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     pointer-events: none;
 }
@@ -66,43 +70,64 @@ div.body-content{
 
 @keyframes mouseCircleAnim {
     0% {
-        width: 4rem; 
+        width: 4rem;
         height: 4rem;
     }
+
+    15% {
+        width: 5rem;
+        height: 5rem;
+    }
+
     25% {
-        width: 6rem; 
+        width: 6rem;
         height: 6rem;
     }
+
     35% {
-        width: 4rem; 
+        width: 4rem;
         height: 4rem;
     }
+
+    55% {
+        width: 4rem;
+        height: 4rem;
+    }
+
     70% {
-        width: 6rem; 
+        width: 6rem;
         height: 6rem;
     }
+
+    85% {
+        width: 5rem;
+        height: 5rem;
+    }
+
     100% {
-        width: 4rem; 
+        width: 4rem;
         height: 4rem;
     }
 }
 
 @keyframes mouseDotAnim {
     0% {
-        width: 0.5rem; 
+        width: 0.5rem;
         height: 0.5rem;
     }
+
     55% {
-        width: 1.5rem; 
+        width: 1.5rem;
         height: 1.5rem;
     }
+
     100% {
-        width: 0.5rem; 
+        width: 0.5rem;
         height: 0.5rem;
     }
 }
 
-.mouse-dot{
+.mouse-dot {
     width: 0.5rem;
     height: 0.5rem;
     background-color: #0c45e2c4;
@@ -111,7 +136,7 @@ div.body-content{
 
 .main-btn {
     position: absolute;
-    bottom:3rem;
+    bottom: 3rem;
     width: 13rem;
     height: 13rem;
     background-color: #74bfe2;
@@ -136,13 +161,12 @@ div.body-content{
     transition: transform 0.2s 0.5s, border 0.2s;
 }
 
-.main-btn-line{
+.main-btn-line {
     position: absolute;
     top: 4rem;
     width: 3rem;
     height: 0.5rem;
     border: 0.1rem solid #fff
-
 }
 
 .main-btn-line:nth-child(1) {
@@ -163,6 +187,7 @@ div.body-content{
     border-left: none;
 
 }
+
 .main-btn-line:nth-child(4) {
     transform: rotateZ(-45deg)translateX(-0.65rem);
     transform-origin: left center;
@@ -181,8 +206,9 @@ div.body-content{
     border-left: none;
 
 }
+
 .main-btn span {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     position: absolute;
     bottom: 3rem;
     color: #fff;
@@ -190,11 +216,18 @@ div.body-content{
     font-weight: 600;
     text-transform: uppercase;
 }
+
+.main-part {
+    display: fl;
+    align-content: center;
+    padding: 4rem;
+}
+
 .page-bg {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(images/bg.jpg) center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url(../images/bg.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -211,7 +244,8 @@ div.body-content{
     transform: translate(-50%, -50%);
 }
 
-.half-circle, .half-circle-top {
+.half-circle,
+.half-circle-top {
     position: absolute;
     top: 0;
     left: 0;
@@ -261,6 +295,7 @@ div.body-content{
     transition: transform .5s;
     pointer-events: none;
 }
+
 .menu-icon {
     position: fixed;
     top: 3.5rem;
@@ -283,10 +318,12 @@ div.body-content{
     margin: 0.5rem 0;
     box-shadow: 0 0.3rem 0.5rem #000;
 }
+
 .show-menu-icon {
     opacity: 1;
     visibility: visible;
 }
+
 .navbar {
     position: fixed;
     top: 2.5rem;
@@ -300,7 +337,7 @@ div.body-content{
 }
 
 .navbar-link {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -314,16 +351,17 @@ div.body-content{
     visibility: hidden;
     transform: translateX(10rem);
 }
+
 .section-1 {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
 .logo {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     position: absolute;
-    top: 0;
+    top: 1.5rem;
     left: 5rem;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -338,12 +376,12 @@ div.body-content{
     position: absolute;
     overflow: hidden;
     border-radius: 50%;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .main-circle:hover {
     width: 75rem;
-    height: 55rem;
+    height: 45rem;
 }
 
 .main-circle img {
@@ -355,19 +393,19 @@ div.body-content{
 .circles {
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .circle {
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
-    background-color:seashell;
+    background-color: seashell;
     align-self: center;
     justify-self: center;
     opacity: 0.5;
@@ -376,63 +414,63 @@ div.body-content{
 }
 
 .circle-1 {
-    background: url(images/landing/circle-1-img.jpg) center no-repeat;
+    background: url(../images/landing/circle-1-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
 }
 
-.circle-1:hover {
+/* .circle-1:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
-}
+    transition: width 1s, height 1s;
+} */
 
 .circle-2 {
-    background: url(images/landing/circle-2-img.jpg) center no-repeat;
+    background: url(../images/landing/circle-2-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-right: -10rem;
 }
 
-.circle-2:hover {
+/* .circle-2:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
-}
+    transition: width 1s, height 1s;
+} */
 
 .circle-3 {
-    background: url(images/landing/circle-3-img.jpg) center no-repeat;
+    background: url(../images/landing/circle-3-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
 }
 
-.circle-3:hover {
+/* .circle-3:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
-}
+    transition: width 1s, height 1s;
+} */
 
 .circle-4 {
-    background: url(images/landing/circle-4-img.jpg) center no-repeat;
+    background: url(../images/landing/oop.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
     margin-right: -10rem;
 }
 
-.circle-4:hover {
-    width: 35rem;
-    height: 35rem;
-    transition: width .5s, height .5s;
-}
+/* .circle-4:hover {
+    width: 45rem;
+    height: 45rem;
+    transition: width 5s, height 5s;
+} */
 
 .circle-5 {
-    background: url(images/skills/regex.jpg) center no-repeat;
+    background: url(../images/skills/regex.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -444,11 +482,11 @@ div.body-content{
 .circle-5:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-6 {
-    background: url(images/skills/javaOO.png) center no-repeat;
+    background: url(../images/skills/javaOO.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -459,11 +497,11 @@ div.body-content{
 .circle-6:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-7 {
-    background: url(images/skills/git.jpg) center no-repeat;
+    background: url(../images/skills/git.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -474,11 +512,11 @@ div.body-content{
 .circle-7:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-8 {
-    background: url(images/skills/k8.1.jpg) center no-repeat;
+    background: url(../images/skills/k8.1.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -489,11 +527,11 @@ div.body-content{
 .circle-8:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-9 {
-    background: url(images/skills/udemyPHP7.jpg) center no-repeat;
+    background: url(../images/skills/udemyPHP7.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -504,12 +542,12 @@ div.body-content{
 .circle-9:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 
 .circle-10 {
-    background: url(images/skills/algaJS.png) center no-repeat;
+    background: url(../images/skills/algaJS.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -520,11 +558,11 @@ div.body-content{
 .circle-10:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-11 {
-    background: url(images/skills/algaHtml.png) center no-repeat;
+    background: url(../images/skills/algaHtml.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -535,11 +573,11 @@ div.body-content{
 .circle-11:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-12 {
-    background: url(images/skills/css.jpg) center no-repeat;
+    background: url(../images/skills/css.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -550,11 +588,11 @@ div.body-content{
 .circle-12:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-14 {
-    background: url(images/skills/udemyPHP7.jpg) center no-repeat;
+    background: url(../images/skills/udemyPHP7.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -565,11 +603,11 @@ div.body-content{
 .circle-14:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-15 {
-    background: url(images/skills/uml.jpg) center no-repeat;
+    background: url(../images/skills/uml.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -580,11 +618,11 @@ div.body-content{
 .circle-15:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-16 {
-    background: url(images/skills/dbExpertsPostgreS.png) center no-repeat;
+    background: url(../images/skills/dbExpertsPostgreS.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -595,11 +633,11 @@ div.body-content{
 .circle-16:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-17 {
-    background: url(images/skills/diplomaMack.png) center no-repeat;
+    background: url(../images/skills/diplomaMack.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -611,11 +649,11 @@ div.body-content{
 .circle-17:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-18 {
-    background: url(images/skills/docker.jpg) center no-repeat;
+    background: url(../images/skills/docker.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -626,11 +664,11 @@ div.body-content{
 .circle-18:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-19 {
-    background: url(images/skills/phpOOP.png) center no-repeat;
+    background: url(../images/skills/phpOOP.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -641,12 +679,12 @@ div.body-content{
 .circle-19:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 
 .circle-20 {
-    background: url(images/skills/freeBSD8.png) center no-repeat;
+    background: url(../images/skills/freeBSD8.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -657,11 +695,11 @@ div.body-content{
 .circle-20:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-50 {
-    background: url(images/skills/freeBSDSI.png) center no-repeat;
+    background: url(../images/skills/freeBSDSI.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -672,26 +710,27 @@ div.body-content{
 .circle-50:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-21 {
-    background: url(images/projects/cielo.png) center no-repeat;
+    background: url(../images/projects/portaneir.1.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-top: 5rem;
-    margin-left: -10rem;;
+    margin-left: -10rem;
+    ;
 }
 
 .circle-21:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-22 {
-    background: url(images/projects/extratoUserede.png) center no-repeat;
+    background: url(../images/projects/dashboard.2..png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
@@ -702,11 +741,11 @@ div.body-content{
 .circle-22:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-23 {
-    background: url(images/projects/linkUrl.png) center no-repeat;
+    background: url(../images/projects/portaneir.1.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
@@ -717,27 +756,28 @@ div.body-content{
 .circle-23:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-24 {
-    background: url(images/projects/concilia.png) center no-repeat;
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-        margin-top: 5rem;
+    margin-top: 5rem;
     margin-right: -10rem;
 }
 
 .circle-24:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 
 .circle-31 {
-    background: url(images/social-icons/GitHub-Logo.png) center no-repeat;
+    /* background: url(../images/social-icons/GitHub-Logo.png) center no-repeat; */
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -748,27 +788,29 @@ div.body-content{
 .circle-31:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-32 {
-    background: url(images/social-icons/gmail.png) center no-repeat;
+    /* background: url(../images/social-icons/gmail.png) center no-repeat; */
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
     margin-top: 5rem;
-    margin-left: -10rem;
+    margin-right: -10rem;
 }
 
 .circle-32:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 
 .circle-33 {
-    background: url(images/social-icons/telegram-icone-icon.png) center no-repeat;
+    /* background: url(../images/social-icons/telegram-icone-icon.png) center no-repeat; */
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
@@ -779,48 +821,55 @@ div.body-content{
 .circle-33:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
 
 .circle-34 {
-    background: url(images/social-icons/1whatsapp.png) center no-repeat;
+    /* background: url(../images/social-icons/1whatsapp.png) center no-repeat; */
+    background: url(../images/projects/concilia.png) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
     margin-top: 5rem;
-    margin-left: -10rem;
+    margin-right: -10rem;
 }
 
 .circle-34:hover {
     width: 35rem;
     height: 35rem;
-    transition: width .5s, height .5s;
+    transition: width 5s, height 5s;
 }
+
 .featured-text {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     font-size: 2rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     width: 0;
     word-wrap: break-word;
-    line-height: 2.5;
+    line-height: 2.0;
     position: sticky;
     top: 0;
+
 }
 
-.featured-text-1{
+.featured-text-1 {
     margin: 0 auto 0 10rem;
+    text-align: justify;
+    text-justify: inner-word;
 }
 
-.featured-text-2{
+.featured-text-2 {
     margin: 0 10rem 0 auto;
+    text-align: justify;
+    text-justify: inner-word;
 }
 
 .ripple {
     position: absolute;
     width: 0;
     height: 0;
-    background-color:rgb(117, 204, 228);
+    background-color: rgb(117, 204, 228);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: rippleAnim 0.5s forwards;
@@ -836,13 +885,13 @@ div.body-content{
     100% {
         width: 210%;
         height: 210%;
-    }    
+    }
 }
 
-.section-2{
-    font-family: 'Quicksand', sans-serif;
+.section-2 {
+    font-family: 'AzeeBee', sans-serif;
     position: relative;
-    padding: 17rem ;
+    padding: 17rem;
 }
 
 .section-2-heading {
@@ -863,47 +912,51 @@ div.body-content{
 .about-me-text {
     width: 90%;
     margin: auto;
+    text-align: justify;
+    text-justify: auto;
 }
 
 .about-me-text span {
-    font-family: 'Quicksand', sans serif;
-    font-size: 6rem;
+    font-family: 'AzeeBee', sans serif;
+    font-size: 4.0rem;
     color: rgb(255, 255, 255);
     letter-spacing: 0.5rem;
     line-height: 1.0;
     text-shadow: 0 0 1rem #90a3df;
     position: relative;
-    /*mix-blend-mode: color-dodge;*/
+    /* mix-blend-mode: color-dodge; */
 }
 
 @keyframes aboutMeTextAnim {
     0% {
         color: #aaa;
-        top: 0;    
+        top: 0;
     }
+
     10%,
     90% {
         color: #fff;
         top: 2rem;
     }
+
     100% {
         color: #aaa;
-        top: 0;  
+        top: 0;
     }
-    
+
 }
 
 .section-2 .main-btn {
     left: 50%;
     bottom: -5rem;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .section-3 {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 100vh;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     padding: 17rem;
 }
 
@@ -926,7 +979,7 @@ div.body-content{
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
-    background-color:seashell;
+    background-color: seashell;
     align-self: center;
     justify-self: center;
     opacity: 0.5;
@@ -935,24 +988,23 @@ div.body-content{
 }
 
 .projects {
-        position: absolute;
-        top: 25rem;
-        left:0;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
-    
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 
 .section-4 {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 100vh;
-    font-family: 'Quicksand', sans-serif;
-    padding: 17rem; 
+    font-family: 'AzeeBee', sans-serif;
+    padding: 17rem;
 }
 
 .section-4-heading {
@@ -971,11 +1023,11 @@ div.body-content{
     text-shadow: 0.3rem 0.5rem #000;
 }
 
-.background{
+.background {
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
-    background-color:seashell;
+    background-color: seashell;
     align-self: center;
     justify-self: center;
     opacity: 0.5;
@@ -983,25 +1035,24 @@ div.body-content{
     transition: left 2s, top 2s;
 }
 
-
 .backgrounds {
     position: absolute;
-    top: 35rem;
+    top: 60rem;
     left: 0rem;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .section-5 {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 100vh;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'AzeeBee', sans-serif;
     padding: 17rem;
-    
+
 }
 
 .section-5-heading {
@@ -1024,7 +1075,7 @@ div.body-content{
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
-    background-color:seashell;
+    background-color: seashell;
     align-self: center;
     justify-self: center;
     opacity: 0.5;
@@ -1032,52 +1083,37 @@ div.body-content{
     transition: left 2s, top 2s;
 }
 
-
 .contacts {
     position: absolute;
     top: 235rem;
-    left:5rem;
+    left: 5rem;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-
-
-
-
-.footer{
-    /*background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35));*/
-    /* width: 100%;
-    /* height: 200px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* position: absolute; */ 
- 
-      /* background: #ffab62; */
-      margin-top: auto;
-
-      bottom: 0;
-      left: 0;
-      }
-
-
-
-.main-part {
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+    width: 100%;
+    height: 50px;
     display: flex;
-    align-content: center;
-    padding: 4rem;
+    flex-direction: column;
+    position: fixed;
+    /* background: #ffab62; */
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-heading {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: royalblue;
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 400;
+    color: rgb(0, 0, 255);
+    text-align: left;
     margin: auto;
     bottom: 0;
     z-index: 300;
 }
-

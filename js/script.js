@@ -166,12 +166,16 @@ menuIcon.addEventListener('click', () => {
 
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome! Thanks for touching down at my personal page to know a bit more about my professional skills. Let's get started! After getting my college degree in EE* in 1984, I started working with computer technology in several and different areas over time. \
-As Jr started programming in Assembly and C languages on Unix-like platforms such as SCO Unix and others. After couple of years, moved to \
-Systems Integration and Network Engineering having collected a solid foundation on script-based languages and developed a couple of DevOps network-centric based solutions for complex datacenter-based IT applications running under \
-Microsoft, FreeBSD, OpenBSD and Linux platforms. Jumped to WEB development using LAMP, Bootstrap, OOP, JS, Java, and Spring Boot technologies. Currently, developing and mantaining \
-a bunch of web-based payment applications using Docker, Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others as Senior Software Architect. Want to know more about my challenging career as a \
-solutions-oriented Senior Architect? Drop me a quick message at my social networks...";
+const aboutMeTextContent = "Hi! Welcome! Thanks for touching down at my personal page to know a bit more about my professional skills. \
+Let's get started! After getting my college degree in EE* in 1984, as Jr started to program using Assembly and C languages, \
+developing and mantaining device drivers for mass storage devices. Moved to Systems Integration and Network Engineering in early 2000s, \
+having collected a solid foundation on script-based languages and created a couple of DevOps network-centric based solutions for datacenter-based \
+IT applications running under Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2009 jumped to WEB development using LAMP, Bootstrap, OOP, JS, Java, and Spring Boot technologies. \
+For the time being I have coded and mantaining a bunch of web-based payment applications using Docker, \
+Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others \
+as Senior Software Architect. \
+Want to know more about my challenging career as a solutions-oriented Senior Architect? \
+Drop me a quick message at my social networks...";
 
 //console.log(Array.from(aboutMeTextContent));
 Array.from(aboutMeTextContent).forEach(char => {
