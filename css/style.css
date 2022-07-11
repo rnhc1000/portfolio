@@ -14,10 +14,9 @@
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
 }
 
 .tit {
@@ -380,7 +379,7 @@ div.body-content {
 }
 
 .main-circle:hover {
-    width: 75rem;
+    width: 45rem;
     height: 45rem;
 }
 
@@ -392,8 +391,8 @@ div.body-content {
 
 .circles {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
     display: grid;
@@ -411,6 +410,52 @@ div.body-content {
     opacity: 0.5;
     position: relative;
     transition: left 2s, top 2s;
+}
+
+@media (max-width: 768px) {
+
+    .circle {
+        margin:auto;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .main-circle img{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .main-circle:hover {
+        width: 35rem;
+        height: 35rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .circle {
+        margin:auto;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .main-circle img{
+        margin:auto;
+        width: 15rem;
+
+        height: 15rem;
+        border-radius: 85%;
+    }
+
+    .main-circle:hover {
+        width: 15rem;
+        height: 15rem;
+    }
+
 }
 
 .circle-1 {
@@ -935,7 +980,7 @@ div.body-content {
 
 .featured-text {
     font-family: 'AzeeBee', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     width: 0;
@@ -947,13 +992,13 @@ div.body-content {
 }
 
 .featured-text-1 {
-    margin: 0 auto 0 10rem;
+    margin: 0 auto 0 2.5rem;
     text-align: justify;
     text-justify: inner-word;
 }
 
 .featured-text-2 {
-    margin: 0 10rem 0 auto;
+    margin: 0 2.5rem 0 auto;
     text-align: justify;
     text-justify: inner-word;
 }
@@ -984,16 +1029,18 @@ div.body-content {
 .section-2 {
     font-family: 'AzeeBee', sans-serif;
     position: relative;
-    padding: 17rem;
+    padding: 8rem;
+    margin: 0 auto 0 auto;
+
 }
 
 .section-2-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
-    margin: 2rem;
     position: absolute;
     top: 50%;
-    left: 10rem;
+    left: 2.5rem;
+    /* left: 10rem; */
     transform: translateY(-50%);
     width: 0;
     word-break: break-all;
@@ -1004,22 +1051,39 @@ div.body-content {
 
 .about-me-text {
     width: 90%;
-    margin: auto;
+    margin: 5rem;
     text-align: justify;
     text-justify: auto;
 }
 
 .about-me-text span {
     font-family: 'AzeeBee', sans serif;
-    font-size: 4.0rem;
+    font-size: 2.5rem;
     color: rgb(255, 255, 255);
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.25rem;
     line-height: 1.0;
     text-shadow: 0 0 1rem #90a3df;
     position: relative;
     /* mix-blend-mode: color-dodge; */
 }
 
+.about-me-note {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.about-me-note span {
+    font-family: 'AzeeBee', sans serif;
+    font-size: 1.0rem;
+    color: rgb(0,0, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    position: relative;
+    /* mix-blend-mode: color-dodge; */
+}
 @keyframes aboutMeTextAnim {
     0% {
         color: #aaa;
@@ -1054,12 +1118,13 @@ div.body-content {
 }
 
 .section-3-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
-    margin: 2rem;
+    margin-top: 15rem;
     position: absolute;
     top: 75%;
-    left: 10rem;
+    left: 2.5rem;
+    /* left: 10rem; */
     transform: translateY(-50%);
     width: 0;
     word-break: break-all;
@@ -1082,7 +1147,7 @@ div.body-content {
 
 .projects {
     position: absolute;
-    top: 0rem;
+    top: auto;
     left: 0rem;
     width: 100%;
     height: 100%;
@@ -1106,13 +1171,13 @@ div.body-content {
 }
 
 .section-4-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
-    margin: 2rem;
+    margin-top: 50rem;
     position: absolute;
     top: 100%;
     bottom: 100%;
-    left: 10rem;
+    left: 2.5rem;
     transform: translateY(-50%);
     width: 0;
     word-break: break-all;
@@ -1121,7 +1186,7 @@ div.body-content {
     text-shadow: 0.3rem 0.5rem #000;
 }
 
-.background {
+.educational {
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
@@ -1133,9 +1198,9 @@ div.body-content {
     transition: left 2s, top 2s;
 }
 
-.backgrounds {
+.educationals {
     position: absolute;
-    top: 60rem;
+    top: 80rem;
     left: 0rem;
     width: 100%;
     height: 100%;

@@ -166,16 +166,19 @@ menuIcon.addEventListener('click', () => {
 
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome! Thanks for touching down at my personal page to know a bit more about my professional skills. \
-Let's get started! After getting my college degree in EE* in 1984, as Jr started to program using Assembly and C languages, \
-developing and mantaining device drivers for mass storage devices. Moved to Systems Integration and Network Engineering in early 2000s, \
-having collected a solid foundation on script-based languages and created a couple of DevOps network-centric based solutions for datacenter-based \
-IT applications running under Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2009 jumped to WEB development using LAMP, Bootstrap, OOP, JS, Java, and Spring Boot technologies. \
-For the time being I have coded and mantaining a bunch of web-based payment applications using Docker, \
+const aboutMeTextContent = "Hi! Welcome! Thanks for touching down to know a bit more about my current professional skills. \
+Let's get started! After getting my college degree* in 1984, started programming using Assembly (Z-80/8085) and C languages, \
+developing and mantaining device drivers for both fixed and removable mass storage devices to be integrated into x86 platforms. Jumped to Systems Integration and Network Engineering in early 2000s, \
+having collected a solid foundation on script-based languages, having created a couple of client-server applications running under \
+Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2009 started laying the foundations to web-based applications development using LAMP, OOP, JS, Java and Spring Boot technologies, \
+having designed, deployed and supported the very first IP client-server credit-card payment application running over the Internet. For the current time being I have designed, coded and supported a bunch of web-based payment applications using Docker, \
 Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others \
 as Senior Software Architect. \
-Want to know more about my challenging career as a solutions-oriented Senior Architect? \
-Drop me a quick message at my social networks...";
+Want to get down to the nitty-gritty of my challenging career as a solutions developer? \
+Drop me a quick message at my social networks... See you there!";
+
+const aboutMeNote =  document.querySelector('.about-me-note');
+const aboutMeNoteContent = "*EE - Electrical Engineering";
 
 //console.log(Array.from(aboutMeTextContent));
 Array.from(aboutMeTextContent).forEach(char => {
@@ -186,5 +189,15 @@ Array.from(aboutMeTextContent).forEach(char => {
         //e.target.style.animation="aboutMeTextAnim 10s infinite"
     });
 });
+
+Array.from(aboutMeNoteContent).forEach(char => {
+    const span = document.createElement('span');
+    span.textContent= char;
+    aboutMeNote.appendChild(span);
+    span.addEventListener('mouseenter', (e) => {
+        //e.target.style.animation="aboutMeTextAnim 10s infinite"
+    });
+});
+
 
 
