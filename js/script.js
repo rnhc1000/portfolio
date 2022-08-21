@@ -166,14 +166,15 @@ menuIcon.addEventListener('click', () => {
 
 
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome! Thanks for touching down to know a bit more about my current professional skills. \
-Let's get started! After getting my college degree* in 1984, started programming using Assembly (Z-80/8085) and C languages, \
-developing and mantaining device drivers for both fixed and removable mass storage devices to be integrated into x86 platforms. Jumped to Systems Integration and Network Engineering in early 2000s, \
-having collected a solid foundation on script-based languages, having created a couple of client-server applications running under \
-Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2009 started laying the foundations to web-based applications development using LAMP, OOP, JS, Java and Spring Boot technologies, \
+const aboutMeTextContent = "Hi! Welcome! Thanks for touching down so you can a learn a bit more about my current professional skills. \
+Let's get started! After getting my college degree* in 1984, started as working as a Product Engineer, writing device drivers using \
+Assembly (Z-80/8085) and C languages, for both fixed and removable mass storage devices to be integrated into x86 platforms. \
+Jumped to Systems Integration and Network Engineering in early 2000s, \
+building a solid foundation on script-based languages, having created a couple of client-server applications running under \
+Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2011 started a graduate course in Software Engineering in order to lay the foundations to web-based applications development using LAMP, OOP, JS, Java and Spring Boot technologies, \
 having designed, deployed and supported the very first IP client-server credit-card payment application running over the Internet. For the current time being I have designed, coded and supported a bunch of web-based payment applications using Docker, \
 Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others \
-as Senior Software Architect. \
+as Senior Software Architect and last but not least had just started another graduate course in Full Stack Web Development to increase the skills to a higher level. \
 Want to get down to the nitty-gritty of my challenging career as a solutions developer? \
 Drop me a quick message at my social networks... See you there!";
 
@@ -199,5 +200,17 @@ Array.from(aboutMeNoteContent).forEach(char => {
     });
 });
 
+/*
+Hired this company to design, build and deploy the very first ip-based credit card payment application running over the Internet , disrupting the current paradigm at that time of 'one physical server per business'.
+Built a solid foundation on script-based languages, having created a couple of client-server applications running under \Microsoft, FreeBSD, OpenBSD and Linux platforms.
+In 2011 started a graduate course in Software Engineering in order to lay the foundations to web-based applications development using LAMP, OOP, JS, Java and Spring Boot technologies.
+For the current time being I have designed, coded and supported a bunch of web-based payment applications using Docker, \Kubernetes, API, PHP, JS, Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others as Senior Software Architect
+Researched new technologies and build techniques to decrease project delivery times.
+Visited different locations to assess current conditions and draft initial project plans.
+Applied engineering expertise to resolve problems and meet future demands.
+Used engineering knowledge to diagnose and repair system problems.
+Troubleshooting problems with networking systems and equipment, using advanced field knowledge and diagnostic abilities to trace root causes and determine optimal methods to correct faults.
 
+
+*/
 
