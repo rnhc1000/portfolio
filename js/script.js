@@ -178,6 +178,19 @@ as Senior Software Architect and last but not least had just started another gra
 Want to get down to the nitty-gritty of my challenging career as a solutions developer? \
 Drop me a quick message at my social networks... See you there!";
 
+/*
+Hi! Welcome! Thanks for touching down! You'll Know a bit more about my current professional skills. \
+Let's get started! After getting my college degree* in 1984, started working as a Product Engineer, writing device drivers using \
+Assembly (Z-80/8085) and C languages for mass storage devices, specially for PC-based x86 platforms. \
+Jumped to Systems Integration and Network Engineering in early 2000s, 
+building a solid foundation on script-based languages, having created a couple of client-server applications running under \
+Microsoft, FreeBSD, OpenBSD and Linux platforms. In 2011 started a graduate course in Software Engineering in order to lay the foundations to web-based applications development \
+using LAMP, OOP, JavaScript, CSS, HTML, Java and Spring Boot technologies, having designed, deployed and supported the very first IP client-server credit-card payment application running over the Internet. \
+For the current time being I have designed, coded and supported a bunch of web-based payment applications using Laravel PHP, JavaScript, NodeJS, Docker, API, \
+Spring Boot, MongoDB, NodeJS, MySQL, Nginx and others as Senior Software Architect and last but not least had just started another graduate course in Full Stack Web Development to increase the skills to a higher level.\
+Want to get down to the nitty-gritty of my challenging career as a solutions developer? Drop me a quick message at my social networks... See you there!
+*/
+
 const aboutMeNote =  document.querySelector('.about-me-note');
 const aboutMeNoteContent = "*EE - Electrical Engineering";
 
