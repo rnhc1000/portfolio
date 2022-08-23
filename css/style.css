@@ -380,12 +380,14 @@ div.body-content {
     position: absolute;
     overflow: hidden;
     border-radius: 50%;
-    transition: width 5s, height 5s;
+    transition: width 10s, height 10s;
+    max-width: 100%;
 }
 
 .main-circle:hover {
-    width: 45rem;
-    height: 45rem;
+    width: 35rem;
+    height: 35rem;
+    transition: left 5s, top 5s;
 }
 
 .main-circle img {
@@ -469,13 +471,15 @@ div.body-content {
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
+    max-width: 100%;
+    display: block;
 }
 
-/* .circle-1:hover {
+ .circle-1:hover {
     width: 35rem;
     height: 35rem;
-    transition: width 1s, height 1s;
-} */
+    transition: width 5s, height 5s;
+} 
 
 .circle-2 {
     background: url(../images/landing/circle-2-img.jpg) center no-repeat;
@@ -483,13 +487,16 @@ div.body-content {
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-right: -10rem;
+    max-width: 100%;
+    display: block;
+
 }
 
-/* .circle-2:hover {
+.circle-2:hover {
     width: 35rem;
     height: 35rem;
-    transition: width 1s, height 1s;
-} */
+    transition: width 5s, height 5s;
+} 
 
 .circle-3 {
     background: url(../images/landing/circle-3-img.jpg) center no-repeat;
@@ -497,13 +504,16 @@ div.body-content {
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
     margin-left: -10rem;
+    max-width: 100%;
+    display: block;
+
 }
 
-/* .circle-3:hover {
+ .circle-3:hover {
     width: 35rem;
     height: 35rem;
-    transition: width 1s, height 1s;
-} */
+    transition: width 5s, height 5s;
+} 
 
 .circle-4 {
     background: url(../images/landing/oop.png) center no-repeat;
@@ -511,13 +521,16 @@ div.body-content {
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
     margin-right: -10rem;
+    max-width: 100%;
+    display: block;
+
 }
 
-/* .circle-4:hover {
+ .circle-4:hover {
     width: 45rem;
     height: 45rem;
     transition: width 5s, height 5s;
-} */
+} 
 
 .circle-5 {
     background: url(../images/skills/oop.1.jpg) center no-repeat;
@@ -527,6 +540,9 @@ div.body-content {
     margin-top: 5rem;
     margin-left: 5rem;
     margin-right: 15rem;
+    max-width: 100%;
+    display: block;
+
 }
 
 .circle-5:hover {
@@ -542,6 +558,9 @@ div.body-content {
     border: 0.4rem double #527f8df3;
     margin-top: 5rem;
     margin-right: -10rem;
+    max-width: 100%;
+    display: block;
+
 }
 
 .circle-6:hover {
