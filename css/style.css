@@ -69,7 +69,8 @@ div.body-content {
     width: 3rem;
     height: 3rem;
     border: 0.25rem solid #63898b;
-    animation: mouseCircleAnim 10s infinite linear;
+    animation-name: mouseCircleAnim;
+    animation-duration: 5s;
 }
 
 @keyframes mouseCircleAnim {
@@ -272,7 +273,7 @@ div.body-content {
     background-color: rgb(166, 166, 166);
 }
 
-/*.progress-bar:hover .half-circle-top {
+.progress-bar:hover .half-circle-top {
     opacity: 0;
     transition: opacity 0s 1s;
 }
@@ -287,7 +288,7 @@ div.body-content {
     transform: rotate(360deg);
     transition: transform 2s linear;
 }
-*/
+
 .progress-bar-circle {
     width: 6.85rem;
     height: 6.85rem;
@@ -375,26 +376,23 @@ div.body-content {
 }
 
 .main-circle {
-    width: 25rem;
-    height: 25rem;
+    /* background: url(../images/landing/undraw_Hello_re_3evm.png) center no-repeat; */
+    width: 50rem;
+    height: 50rem;
     position: absolute;
     overflow: hidden;
     border-radius: 50%;
-    transition: width 10s, height 10s;
+    margin: auto;
+    /* transition: width 5s, height 5s; */
     max-width: 100%;
 }
+    /*   */
 
-.main-circle:hover {
-    width: 35rem;
-    height: 35rem;
-    transition: left 5s, top 5s;
-}
-
-.main-circle img {
+/* .main-circle img {
     mix-blend-mode: overlay;
     position: relative;
     transition: left 2s, top 2s;
-}
+} */
 
 .circles {
     position: absolute;
@@ -417,9 +415,97 @@ div.body-content {
     opacity: 0.5;
     position: relative;
     transition: left 2s, top 2s;
+    margin: auto;
 }
 
-@media (max-width: 768px) {
+.fieldset-border {
+    border: 1px groove #ddd !important;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+
+.fieldset-border .legend-border {
+    font-size: 4.0em !important;
+    text-align: left !important;
+    width: auto;
+    margin: 25px;
+    padding: 0;
+    border-bottom: none;
+    mix-blend-mode: lighten;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    font-family: 'Azeebee', sans-serif;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .fieldset-border {
+        border: 1px groove #ddd !important;
+        padding: 0 0 0 0 !important;
+        margin: 0 0 0 0 !important;
+        -webkit-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+    
+    .fieldset-border .legend-border {
+        font-size: 2.0em !important;
+        text-align: left !important;
+        width: auto;
+        margin: 25px;
+        padding: 0;
+        border-bottom: none;
+        mix-blend-mode: lighten;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        font-family: 'Azeebee', sans-serif;
+    
+    }
+
+    .circle {
+        margin:auto;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .main-circle img{
+        margin:auto;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 85%;
+    }
+
+    .main-circle:hover {
+        width: 15rem;
+        height: 15rem;
+    }
+
+
+    .about-me {
+        text-align: center;
+        text-justify: auto;
+        margin: 1rem;
+        font-family: 'Azeebee', sans-serif;
+        font-size: 1.0rem;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        position: relative;
+        mix-blend-mode: lighten;
+
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
 
     .circle {
         margin:auto;
@@ -440,37 +526,30 @@ div.body-content {
         height: 35rem;
     }
 
-}
+    .about-me {
+        text-align: center;
+        text-justify: auto;
+        margin: 1.5rem;
+        font-family: 'Azeebee', sans-serif;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        position: relative;
+        mix-blend-mode: lighten;
 
-@media (max-width: 420px) {
-
-    .circle {
-        margin:auto;
-        width: 10rem;
-        height: 10rem;
-    }
-
-    .main-circle img{
-        margin:auto;
-        width: 15rem;
-
-        height: 15rem;
-        border-radius: 85%;
-    }
-
-    .main-circle:hover {
-        width: 15rem;
-        height: 15rem;
     }
 
 }
+
 
 .circle-1 {
     background: url(../images/landing/circle-1-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-left: -10rem;
+    margin: auto;
     max-width: 100%;
     display: block;
 }
@@ -486,7 +565,7 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-right: -10rem;
+    margin: auto;
     max-width: 100%;
     display: block;
 
@@ -503,7 +582,7 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-left: -10rem;
+    margin: auto;
     max-width: 100%;
     display: block;
 
@@ -520,15 +599,15 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-right: -10rem;
+    margin: auto;
     max-width: 100%;
     display: block;
 
 }
 
  .circle-4:hover {
-    width: 45rem;
-    height: 45rem;
+    width: 35rem;
+    height: 35rem;
     transition: width 5s, height 5s;
 } 
 
@@ -537,9 +616,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: 5rem;
-    margin-right: 15rem;
+    margin: auto;
+
     max-width: 100%;
     display: block;
 
@@ -556,8 +634,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
     max-width: 100%;
     display: block;
 
@@ -574,8 +652,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-7:hover {
@@ -591,8 +669,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-8:hover {
@@ -606,8 +684,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-9:hover {
@@ -622,8 +700,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-10:hover {
@@ -637,8 +715,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-11:hover {
@@ -652,8 +730,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-12:hover {
@@ -667,8 +745,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-14:hover {
@@ -682,8 +760,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-15:hover {
@@ -697,8 +775,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-16:hover {
@@ -712,9 +790,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-17:hover {
@@ -728,8 +805,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-18:hover {
@@ -743,8 +820,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-19:hover {
@@ -759,8 +836,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-20:hover {
@@ -774,8 +851,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-50:hover {
@@ -789,8 +866,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
     ;
 }
 
@@ -805,8 +882,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-22:hover {
@@ -820,8 +897,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.5rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-23:hover {
@@ -836,8 +913,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-24:hover {
@@ -853,8 +930,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-31:hover {
@@ -869,8 +946,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-32:hover {
@@ -886,8 +963,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-33:hover {
@@ -902,8 +979,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-34:hover {
@@ -917,8 +994,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-51:hover {
@@ -932,8 +1009,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-52:hover {
@@ -946,8 +1023,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-53:hover {
@@ -961,8 +1038,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-54:hover {
@@ -977,8 +1054,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-left: -10rem;
+    margin: auto;
+
 }
 
 .circle-55:hover {
@@ -992,8 +1069,8 @@ div.body-content {
     background-size: cover;
     background-clip: content-box;
     border: 0.4rem double #527f8df3;
-    margin-top: 5rem;
-    margin-right: -10rem;
+    margin: auto;
+
 }
 
 .circle-56:hover {
@@ -1018,13 +1095,28 @@ div.body-content {
 .featured-text-1 {
     margin: 0 auto 0 2.5rem;
     text-align: justify;
-    text-justify: inner-word;
+    text-justify: auto;
 }
 
 .featured-text-2 {
     margin: 0 2.5rem 0 auto;
     text-align: justify;
-    text-justify: inner-word;
+    text-justify: auto;
+}
+
+.about-me {
+    text-align: justify;
+    text-justify: auto;
+    margin: 2.5rem;
+    font-family: 'Azeebee', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    position: relative;
+    mix-blend-mode: lighten;
+
 }
 
 .ripple {

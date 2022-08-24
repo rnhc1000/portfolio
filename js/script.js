@@ -197,14 +197,14 @@ const aboutMeNote =  document.querySelector('.about-me-note');
 const aboutMeNoteContent = "*EE - Electrical Engineering";
 
 //console.log(Array.from(aboutMeTextContent));
-Array.from(aboutMeTextContent).forEach(char => {
-    const span = document.createElement('span');
-    span.textContent= char;
-    aboutMeText.appendChild(span);
-    span.addEventListener('mouseenter', (e) => {
-        //e.target.style.animation="aboutMeTextAnim 10s infinite"
-    });
-});
+// Array.from(aboutMeTextContent).forEach(char => {
+//     const span = document.createElement('span');
+//     span.textContent= char;
+//     aboutMeText.appendChild(span);
+//     span.addEventListener('mouseenter', (e) => {
+//         // e.target.style.animation="aboutMeTextAnim 10s infinite"
+//     });
+// });
 
 Array.from(aboutMeNoteContent).forEach(char => {
     const span = document.createElement('span');
