@@ -1,10 +1,9 @@
-
 const mouseCircle = document.querySelector(".mouse-circle");
 const mouseDot = document.querySelector(".mouse-dot");
 
-const mouseCircleFn = (x,y) => {
-    mouseCircle.style.cssText=`top: ${y}px; left: ${x}px; opacity: 1`;
-    mouseDot.style.cssText=`top: ${y}px; left: ${x}px; opacity: 1`;
+const mouseCircleFn = (x, y) => {
+  mouseCircle.style.cssText = `top: ${y}px; left: ${x}px; opacity: 1`;
+  mouseDot.style.cssText = `top: ${y}px; left: ${x}px; opacity: 1`;
 };
 
 const circles = document.querySelectorAll(".circle");
@@ -12,131 +11,136 @@ const mainImg = document.querySelector(".main-circle img");
 
 let mX = 0;
 let mY = 0;
-let z  = 100;
+let z = 100;
 
-const animatedCircles = (e,x,y) => {
-    if (x < mX) {
-        //console.log("moved to left");
-        circles.forEach((circle) => {
-            circle.style.left=`${z}px`;
-        });
-        mainImg.style.left=`${z}px`;
-    } else if(x>mX) {
-        circles.forEach((circle) => {
-            circle.style.left=`-${z}px`;
-        });
-        mainImg.style.left=`-${z}px`;
-
-    }
-    if (y < mY) {
-        //console.log("moved upwards");
-        circles.forEach((circle) => {
-            circle.style.top="50px";
-        });
-        mainImg.style.top=`50px`;
-    } else if (y>mY) {
-        circles.forEach((circle) => {
-            circle.style.top="-50px";
-        });
-        mainImg.style.top=`-50px`;
-
-    }
-    mX = e.clientX;
-    mY = e.clientY;
+const animatedCircles = (e, x, y) => {
+  if (x < mX) {
+    //console.log("moved to left");
+    circles.forEach((circle) => {
+      circle.style.left = `${z}px`;
+    });
+    mainImg.style.left = `${z}px`;
+  } else if (x > mX) {
+    circles.forEach((circle) => {
+      circle.style.left = `-${z}px`;
+    });
+    mainImg.style.left = `-${z}px`;
+  }
+  if (y < mY) {
+    //console.log("moved upwards");
+    circles.forEach((circle) => {
+      circle.style.top = "50px";
+    });
+    mainImg.style.top = `50px`;
+  } else if (y > mY) {
+    circles.forEach((circle) => {
+      circle.style.top = "-50px";
+    });
+    mainImg.style.top = `-50px`;
+  }
+  mX = e.clientX;
+  mY = e.clientY;
 };
 
 let hoveredElPosition = [];
-document.body.addEventListener('mousemove', (e) => {
-    let x = e.clientX;
-    let y = e.clientY;
-    mouseCircleFn(x,y);
-    animatedCircles(e,x,y);
+document.body.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+  mouseCircleFn(x, y);
+  animatedCircles(e, x, y);
 
-    //Sticky Element
-    const hoveredEl = document.elementFromPoint(x,y);
-    console.log(hoveredEl);
-    if(hoveredEl.classList.contains("sticky")) {
-        /*console.log("Sticky");*/
-        if(hoveredElPosition.length < 1) {
-            hoveredElPosition=[hoveredEl.offsetTop, hoveredEl.offsetLeft];
-                console.log(hoveredElPosition);
-        }
-        hoveredEl.style.cssText = `top:${y}px;left:${x}px`;
-        if(hoveredEl.offsetTop <= hoveredElPosition[0]-100 || hoveredEl.offsetTop >= hoveredElPosition[0] + 100 || hoveredEl.offsetLeft <= hoveredElPosition[1]-100 || hoveredElPosition.offsetLeft >= hoveredElPosition[1] + 100) {
-            hoveredEl.style.cssText="";
-            hoveredElPosition = [];
-        }
-        hoveredEl.onmouseleave = () => {
-            hoveredEl.style.cssText="";
-            hoveredElPosition = [];
-        }
+  //Sticky Element
+  const hoveredEl = document.elementFromPoint(x, y);
+  console.log(hoveredEl);
+  if (hoveredEl.classList.contains("sticky")) {
+    /*console.log("Sticky");*/
+    if (hoveredElPosition.length < 1) {
+      hoveredElPosition = [hoveredEl.offsetTop, hoveredEl.offsetLeft];
+      console.log(hoveredElPosition);
     }
-    //End of Sticky Element
+    hoveredEl.style.cssText = `top:${y}px;left:${x}px`;
+    if (
+      hoveredEl.offsetTop <= hoveredElPosition[0] - 100 ||
+      hoveredEl.offsetTop >= hoveredElPosition[0] + 100 ||
+      hoveredEl.offsetLeft <= hoveredElPosition[1] - 100 ||
+      hoveredElPosition.offsetLeft >= hoveredElPosition[1] + 100
+    ) {
+      hoveredEl.style.cssText = "";
+      hoveredElPosition = [];
+    }
+    hoveredEl.onmouseleave = () => {
+      hoveredEl.style.cssText = "";
+      hoveredElPosition = [];
+    };
+  }
+  //End of Sticky Element
 });
 
-document.body.addEventListener('mouseleave', (e) => {
-    mouseCircle.style.opacity = '0';
-    mouseDot.style.opacity = '0';
+document.body.addEventListener("mouseleave", (e) => {
+  mouseCircle.style.opacity = "0";
+  mouseDot.style.opacity = "0";
 });
-
 
 const mainBtns = document.querySelectorAll(".main-btn");
 mainBtns.forEach((btn) => {
-    let ripple;
-    btn.addEventListener('mouseenter', e => {
-        //console.log(e.target.getBoundingClientRect());
-        const left = e.clientX - e.target.getBoundingClientRect().left;
-        const top  = e.clientY - e.target.getBoundingClientRect().top;
-        ripple=document.createElement('div');
-        ripple.classList.add('ripple');
-        ripple.style.left= `${left}px`;
-        ripple.style.top=`${top}px`;
-        btn.prepend(ripple);
-    });
-    btn.addEventListener('mouseleave', () => {
-        btn.removeChild(ripple);
-    });
+  let ripple;
+  btn.addEventListener("mouseenter", (e) => {
+    //console.log(e.target.getBoundingClientRect());
+    const left = e.clientX - e.target.getBoundingClientRect().left;
+    const top = e.clientY - e.target.getBoundingClientRect().top;
+    ripple = document.createElement("div");
+    ripple.classList.add("ripple");
+    ripple.style.left = `${left}px`;
+    ripple.style.top = `${top}px`;
+    btn.prepend(ripple);
+  });
+  btn.addEventListener("mouseleave", () => {
+    btn.removeChild(ripple);
+  });
 });
 // Progress Bar
 const sections = document.querySelectorAll("section");
-const progressBar = document.querySelector('.progress-bar');
-const halfCircles = document.querySelectorAll('.half-circle');
-const halfCircleTop = document.querySelector('.half-circle-top');
-const progressBarCircle = document.querySelector('.progress-bar-circle');
+const progressBar = document.querySelector(".progress-bar");
+const halfCircles = document.querySelectorAll(".half-circle");
+const halfCircleTop = document.querySelector(".half-circle-top");
+const progressBarCircle = document.querySelector(".progress-bar-circle");
 
 const progressBarFn = () => {
-    const pageViewportHeight = window.innerHeight;
-    const pageHeight = document.documentElement.scrollHeight;
-    const scrolledPortion = window.pageYOffset;
-    const scrolledPortionDegree = (scrolledPortion /(pageHeight - pageViewportHeight)) * 360;
-    //console.log(scrolledPortionDegree);
-    halfCircles.forEach(el => {
-        el.style.transform = `rotate(${scrolledPortionDegree}deg)`;
-        if(scrolledPortionDegree >= 180) {
-            halfCircles[0].style.transform = "rotate(180deg)";
-            halfCircleTop.style.opacity = '0';
-        } else {
-            halfCircleTop.style.opacity = '1';
-        }
-    });
-
-    const scrollBool = scrolledPortion + pageViewportHeight === pageHeight;
-
-    progressBar.onclick = (e) => {
-        e.preventDefault();
-        const sectionPositions = Array.from(sections).map((section) => scrolledPortion + section.getBoundingClientRect().top);
-        /*console.log(sectionPositions);*/
-        const position = sectionPositions.find (sectionPosition => {
-            return sectionPosition > scrolledPortion;
-        })
-        scrollBool ? window.scrollTo(0,0) : window.scrollTo(0, position);
-    };
-    // Arrow Rotation
-    if (scrollBool) {
-        progressBarCircle.style.transform = "rotate(180deg)";
+  const pageViewportHeight = window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+  const scrolledPortion = window.pageYOffset;
+  const scrolledPortionDegree =
+    (scrolledPortion / (pageHeight - pageViewportHeight)) * 360;
+  //console.log(scrolledPortionDegree);
+  halfCircles.forEach((el) => {
+    el.style.transform = `rotate(${scrolledPortionDegree}deg)`;
+    if (scrolledPortionDegree >= 180) {
+      halfCircles[0].style.transform = "rotate(180deg)";
+      halfCircleTop.style.opacity = "0";
     } else {
-        progressBarCircle.style.transform = "rotate(0deg)";
+      halfCircleTop.style.opacity = "1";
     }
+  });
+
+  const scrollBool = scrolledPortion + pageViewportHeight === pageHeight;
+
+  progressBar.onclick = (e) => {
+    e.preventDefault();
+    const sectionPositions = Array.from(sections).map(
+      (section) => scrolledPortion + section.getBoundingClientRect().top
+    );
+    /*console.log(sectionPositions);*/
+    const position = sectionPositions.find((sectionPosition) => {
+      return sectionPosition > scrolledPortion;
+    });
+    scrollBool ? window.scrollTo(0, 0) : window.scrollTo(0, position);
+  };
+  // Arrow Rotation
+  if (scrollBool) {
+    progressBarCircle.style.transform = "rotate(180deg)";
+  } else {
+    progressBarCircle.style.transform = "rotate(0deg)";
+  }
 };
 progressBarFn();
 // End of Progress Bar
@@ -145,28 +149,27 @@ progressBarFn();
 const menuIcon = document.querySelector(".menu-icon");
 const navbar = document.querySelector(".navbar");
 
-document.addEventListener('scroll',() => {
-    menuIcon.classList.add('show-menu-icon');
-    navbar.classList.add('hide-navbar');
-    if(window.scrollY=== 0) {
-        menuIcon.classList.remove('show-menu-icon');
-        navbar.classList.remove('hide-navbar');
-    }
-    progressBarFn();
-})
+document.addEventListener("scroll", () => {
+  menuIcon.classList.add("show-menu-icon");
+  navbar.classList.add("hide-navbar");
+  if (window.scrollY === 0) {
+    menuIcon.classList.remove("show-menu-icon");
+    navbar.classList.remove("hide-navbar");
+  }
+  progressBarFn();
+});
 
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.remove('show-menu-icon');
-    navbar.classList.remove('hide-navbar');
-})
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.remove("show-menu-icon");
+  navbar.classList.remove("hide-navbar");
+});
 //End of Progress Bar Click
-
 
 //End navigation
 
-
-const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "Hi! Welcome! Thanks for touching down! You'll Know a bit more about my current professional skills. \
+const aboutMeText = document.querySelector(".about-me-text");
+const aboutMeTextContent =
+  "Hi! Welcome! Thanks for touching down! You'll Know a bit more about my current professional skills. \
 Let's get started! After getting my college degree* in 1984, started working as a Product Engineer, writing device drivers using \
 Assembly (Z-80/8085) and C languages for mass storage devices, specially for PC-based x86 platforms. \
 Jumped to Systems Integration and Network Engineering in early 2000s, \
@@ -193,7 +196,7 @@ Want to get down to the nitty-gritty of my challenging career as a solutions dev
 interested in getting more information, click on the links close to each project shown below or upload my Resume... Thank you for your visit!
 */
 
-const aboutMeNote =  document.querySelector('.about-me-note');
+const aboutMeNote = document.querySelector(".about-me-note");
 const aboutMeNoteContent = "*EE - Electrical Engineering";
 
 //console.log(Array.from(aboutMeTextContent));
@@ -206,13 +209,13 @@ const aboutMeNoteContent = "*EE - Electrical Engineering";
 //     });
 // });
 
-Array.from(aboutMeNoteContent).forEach(char => {
-    const span = document.createElement('span');
-    span.textContent= char;
-    aboutMeNote.appendChild(span);
-    span.addEventListener('mouseenter', (e) => {
-        //e.target.style.animation="aboutMeTextAnim 10s infinite"
-    });
+Array.from(aboutMeNoteContent).forEach((char) => {
+  const span = document.createElement("span");
+  span.textContent = char;
+  aboutMeNote.appendChild(span);
+  span.addEventListener("mouseenter", (e) => {
+    //e.target.style.animation="aboutMeTextAnim 10s infinite"
+  });
 });
 
 /*
@@ -228,4 +231,3 @@ Troubleshooting problems with networking systems and equipment, using advanced f
 
 
 */
-
