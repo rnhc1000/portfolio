@@ -1,0 +1,1410 @@
+/* @import url('https://fonts.googleapis.com/css2?family=AzeeBee:wght@300;400;500;600;700&display=swap'); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Exo:ital,wght@0,100;0,400;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+.tit {
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* text-shadow: 0.3rem 0.5rem #000; */
+}
+
+.icn {
+    position: absolute;
+    bottom: 35%;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+div.body-content {
+    padding-bottom: 100px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse-circle,
+.mouse-dot {
+    border-radius: 50%;
+    position: fixed;
+    z-index: 300;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mouse-circle {
+    width: 3rem;
+    height: 3rem;
+    border: 0.25rem solid #63898b;
+    animation-name: mouseCircleAnim;
+    animation-duration: 5s;
+}
+
+@keyframes mouseCircleAnim {
+    0% {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    15% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    25% {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    35% {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    55% {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    70% {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    85% {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    100% {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@keyframes mouseDotAnim {
+    0% {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    55% {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    100% {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+
+.mouse-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #0c45e2c4;
+    animation: mouseDotAnim 10s infinite linear;
+}
+
+.main-btn {
+    position: absolute;
+    bottom: 3rem;
+    width: 13rem;
+    height: 13rem;
+    background-color: #74bfe2;
+    border-radius: 50%;
+    border: 0.2rem double #527f8df3;
+    padding: 0.1rem;
+    overflow: hidden;
+}
+
+.main-btn-content {
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid #527f8df3;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    transition: transform 0.2s, border 0.2s;
+}
+
+.main-btn:hover .main-btn-content {
+    transform: rotate(60deg);
+    border: 0.2rem double #527f8df3;
+    transition: transform 0.2s 0.5s, border 0.2s;
+}
+
+.main-btn-line {
+    position: absolute;
+    top: 4rem;
+    width: 3rem;
+    height: 0.5rem;
+    border: 0.1rem solid #fff
+}
+
+.main-btn-line:nth-child(1) {
+    transform: rotateZ(-45deg)translateX(-0.65rem);
+    transform-origin: left center;
+    border-right: none;
+}
+
+
+.main-btn-line:nth-child(2) {
+    transform: rotateZ(45deg)translateX(0.65rem);
+    transform-origin: right center;
+    border-left: none;
+}
+
+.main-btn-line:nth-child(3) {
+    transform: rotateZ(90deg)translateX(0.5rem);
+    border-left: none;
+
+}
+
+.main-btn-line:nth-child(4) {
+    transform: rotateZ(-45deg)translateX(-0.65rem);
+    transform-origin: left center;
+    border-right: none;
+}
+
+
+.main-btn-line:nth-child(5) {
+    transform: rotateZ(45deg)translateX(0.65rem);
+    transform-origin: right center;
+    border-left: none;
+}
+
+.main-btn-line:nth-child(6) {
+    transform: rotateZ(90deg)translateX(0.5rem);
+    border-left: none;
+
+}
+
+.main-btn span {
+    font-family: 'AzeeBee', sans-serif;
+    position: absolute;
+    bottom: 3rem;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main-part {
+    display: fl;
+    align-content: center;
+    padding: 4rem;
+}
+
+.page-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .45)), url(../images/circle-1-img.jpg) center no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .45)), url(../images/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.progress-bar {
+    position: fixed;
+    bottom: 7rem;
+    right: 7rem;
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(166, 166, 166);
+    border-radius: 50%;
+    z-index: 200;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.half-circle,
+.half-circle-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+    pointer-events: none;
+}
+
+
+.half-circle:nth-child(1) {
+    background-color: #0c45e2c4;
+}
+
+.half-circle:nth-child(2) {
+    background-color: #0c45e2c4;
+}
+
+.half-circle-top {
+    background-color: rgb(166, 166, 166);
+}
+
+.progress-bar:hover .half-circle-top {
+    opacity: 0;
+    transition: opacity 0s 1s;
+}
+
+.progress-bar:hover .half-circle:nth-child(1) {
+    transform: rotate(180deg);
+    transition: transform 1s linear;
+}
+
+
+.progress-bar:hover .half-circle:nth-child(2) {
+    transform: rotate(360deg);
+    transition: transform 2s linear;
+}
+
+.progress-bar-circle {
+    width: 6.85rem;
+    height: 6.85rem;
+    background-color: rgb(166, 166, 166);
+    border-radius: 50%;
+    color: #63898b;
+    font-size: 4rem;
+    z-index: 200;
+    transition: transform .5s;
+    pointer-events: none;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+    width: 12rem;
+    height: 7rem;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s;
+}
+
+.menu-icon-line {
+    width: 4rem;
+    height: 0.1rem;
+    background-color: #fff;
+    margin: 0.5rem 0;
+    box-shadow: 0 0.3rem 0.5rem #000;
+}
+
+.show-menu-icon {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar {
+    position: fixed;
+    top: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 3rem;
+    z-index: 100;
+    transition: opacity .5s;
+    visibility: 0.5s, transform 0.5s;
+}
+
+.navbar-link {
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 2.5rem;
+    text-shadow: 0 0.3rem 0.5rem #000;
+}
+
+.hide-navbar {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10rem);
+}
+
+.section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    font-family: 'AzeeBee', sans-serif;
+    position: absolute;
+    top: 1.5rem;
+    left: 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.main-circle {
+    /* background: url(../images/landing/undraw_Hello_re_3evm.png) center no-repeat; */
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    /* transition: width 5s, height 5s; */
+    max-width: 100%;
+}
+
+/*   */
+
+/* .main-circle img {
+    mix-blend-mode: overlay;
+    position: relative;
+    transition: left 2s, top 2s;
+} */
+
+.circles {
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.circle {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+    margin: auto;
+}
+
+.fieldset-border {
+    border: 1px groove #ddd !important;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+
+.fieldset-border .legend-border {
+    font-size: 4.0em !important;
+    text-align: left !important;
+    width: auto;
+    margin: 25px;
+    padding: 0;
+    border-bottom: none;
+    mix-blend-mode: lighten;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    font-family: 'Azeebee', sans-serif;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .fieldset-border {
+        border: 1px groove #ddd !important;
+        padding: 0 0 0 0 !important;
+        margin: 0 0 0 0 !important;
+        -webkit-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    .fieldset-border .legend-border {
+        font-size: 2.0em !important;
+        text-align: left !important;
+        width: auto;
+        margin: 25px;
+        padding: 0;
+        border-bottom: none;
+        mix-blend-mode: lighten;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        font-family: 'Azeebee', sans-serif;
+
+    }
+
+    .circle {
+        margin: auto;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .main-circle img {
+        margin: auto;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 85%;
+    }
+
+    .main-circle:hover {
+        width: 15rem;
+        height: 15rem;
+    }
+
+
+    .about-me {
+        text-align: center;
+        text-justify: auto;
+        margin: 1rem;
+        font-family: 'Azeebee', sans-serif;
+        font-size: 1.0rem;
+        color: rgb(0, 255, 0);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        position: relative;
+        mix-blend-mode: lighten;
+
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .circle {
+        margin: auto;
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .main-circle img {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .main-circle:hover {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .about-me {
+        text-align: center;
+        text-justify: auto;
+        margin: 1.5rem;
+        font-family: 'Azeebee', sans-serif;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0.25rem;
+        line-height: 1.0;
+        text-shadow: 0 0 1rem #90a3df;
+        position: relative;
+        mix-blend-mode: lighten;
+
+    }
+
+}
+
+
+.circle-1 {
+    background: url(../images/landing/circle-1-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-1:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-2 {
+    background: url(../images/landing/circle-2-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+
+}
+
+.circle-2:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-3 {
+    background: url(../images/landing/circle-3-img.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-3:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-4 {
+    background: url(../images/landing/oop.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-4:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-21 {
+    background: url(../images/projects/portaneir.1.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+}
+
+.circle-21:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-22 {
+    background: url(../images/projects/dashboard.2..png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-22:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-23 {
+    background: url(../images/projects/concilia.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.5rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-23:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-24 {
+    /* background: url(../images/projects/concilia.png) center no-repeat; */
+    background: url(../images/projects/extratoUserede.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+}
+
+.circle-24:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-31 {
+    /* background: url(../images/social-icons/GitHub-Logo.png) center no-repeat; */
+    background: url(../images/projects/zabbix.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-31:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-32 {
+    /* background: url(../images/social-icons/gmail.png) center no-repeat; */
+    background: url(../images/projects/grafana.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-32:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-33 {
+    /* background: url(../images/social-icons/telegram-icone-icon.png) center no-repeat; */
+    background: url(../images/projects/mapa.1.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+
+}
+
+.circle-33:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-34 {
+    /* background: url(../images/social-icons/1whatsapp.png) center no-repeat; */
+    background: url(../images/projects/code.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+
+}
+
+.circle-34:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-5 {
+    background: url(../images/skills/oop.1.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-5:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-6 {
+    background: url(../images/skills/javaOO.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.circle-6:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-7 {
+    background: url(../images/skills/dbExpertsPostgreS.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-7:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-8 {
+    /* background: url(../images/skills/k8.1.jpg) center no-repeat; */
+    background: url(../images/skills/freeBSD8.png) center no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-8:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-9 {
+    background: url(../images/skills/udemyPHP7.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-9:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-10 {
+    background: url(../images/skills/algaJS.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-10:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-11 {
+    background: url(../images/skills/algaHtml.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-11:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-12 {
+    background: url(../images/skills/css.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-12:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-14 {
+    background: url(../images/skills/regex.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-14:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-15 {
+    background: url(../images/skills/uml.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-15:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-16 {
+    background: url(../images/skills/docker.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-16:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-17 {
+    background: url(../images/skills/diplomaMack.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-17:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-18 {
+    background: url(../images/skills/k8.1.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-18:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-19 {
+    background: url(../images/skills/phpOOP.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-19:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-20 {
+    background: url(../images/skills/freeBSDOpenIT.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-20:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-50 {
+    background: url(../images/skills/freeBSDSI.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-50:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-51 {
+    background: url(../images/skills/ccna.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-51:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-52 {
+    background: url(../images/skills/ccda.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-52:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-53 {
+    background: url(../images/skills/ccnp.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-53:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-54 {
+    background: url(../images/skills/ccdp.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-54:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+
+.circle-55 {
+    background: url(../images/skills/ipv6Br.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-55:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.circle-56 {
+    background: url(../images/skills/c.jpg) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 0.4rem double #527f8df3;
+    margin: auto;
+
+}
+
+.circle-56:hover {
+    width: 35rem;
+    height: 35rem;
+    transition: width 5s, height 5s;
+}
+
+.featured-text {
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 2.0;
+    position: sticky;
+    top: 0;
+
+}
+
+.featured-text-1 {
+    margin: 0 auto 0 2.5rem;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.featured-text-2 {
+    margin: 0 2.5rem 0 auto;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.about-me {
+    text-align: justify;
+    text-justify: auto;
+    margin: 2.5rem;
+    font-family: 'Azeebee', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    /* text-shadow: 0 0 1rem #90a3df; */
+    position: relative;
+    /* mix-blend-mode: lighten; */
+
+}
+
+.ripple {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgb(117, 204, 228);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.5s forwards;
+
+}
+
+@keyframes rippleAnim {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    100% {
+        width: 210%;
+        height: 210%;
+    }
+}
+
+.section-2 {
+    font-family: 'AzeeBee', sans-serif;
+    position: relative;
+    padding: 8rem;
+    margin: 0 auto 0 auto;
+}
+
+.section-2-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    /* left: 10rem; */
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.about-me-text {
+    width: 90%;
+    margin: 5rem;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.about-me-text span {
+    font-family: 'AzeeBee', sans serif;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    position: relative;
+    /* mix-blend-mode: color-dodge; */
+}
+
+.about-me-note {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.about-me-note span {
+    font-family: 'AzeeBee', sans serif;
+    font-size: 1.0rem;
+    color: rgb(0, 0, 255);
+    letter-spacing: 0.25rem;
+    line-height: 1.0;
+    text-shadow: 0 0 1rem #90a3df;
+    position: relative;
+    /* mix-blend-mode: color-dodge; */
+}
+
+@keyframes aboutMeTextAnim {
+    0% {
+        color: #aaa;
+        top: 0;
+    }
+
+    10%,
+    90% {
+        color: #fff;
+        top: 2rem;
+    }
+
+    100% {
+        color: #aaa;
+        top: 0;
+    }
+
+}
+
+.section-2 .main-btn {
+    left: 50%;
+    bottom: -5rem;
+    transform: translateX(-50%);
+}
+
+.section-3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'AzeeBee', sans-serif;
+    padding-bottom: 10rem;
+    display: block;
+}
+
+.section-3-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 5rem;
+    position: absolute;
+    top: 75%;
+    left: 2.5rem;
+    /* left: 10rem; */
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.project {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.projects {
+    position: absolute;
+    top: 15rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: rgb(255,255,255);
+    text-align: right;
+}
+
+
+
+.section-4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'AzeeBee', sans-serif;
+    padding: 0, 5rem, 1rem, 5rem;
+    display: block;
+}
+
+.section-4-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 20rem;
+    position: absolute;
+    top: 100%;
+    bottom: 100%;
+    left: 2.5rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.educational {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.educationals {
+    position: absolute;
+    top: 60rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: rgb(255,255,255);
+    text-align: right;
+}
+
+.section-5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'AzeeBee', sans-serif;
+    padding: 17rem;
+
+}
+
+.section-5-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem;
+    position: absolute;
+    top: 350%;
+    bottom: 100%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+    font-weight: 700;
+    text-shadow: 0.3rem 0.5rem #000;
+}
+
+.contact {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: seashell;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    transition: left 2s, top 2s;
+}
+
+.contacts {
+    position: absolute;
+    top: 235rem;
+    left: 5rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* background: #ffab62; */
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-heading {
+    font-family: 'AzeeBee', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 400;
+    color: rgb(0, 0, 255);
+    text-align: left;
+    margin: auto;
+    bottom: 0;
+    z-index: 300;
+}
